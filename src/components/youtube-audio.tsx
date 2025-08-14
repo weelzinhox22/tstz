@@ -5,10 +5,23 @@ import { Volume2, VolumeX, Play, Pause } from 'lucide-react'
 import { Button } from './ui/button'
 import { MusicNotification } from './music-notification'
 
+interface YouTubePlayer {
+  playVideo: () => Promise<void>
+  pauseVideo: () => void
+  setVolume: (volume: number) => void
+  mute: () => void
+  unMute: () => void
+}
+
+interface YouTubeEvent {
+  target: YouTubePlayer
+  data?: number
+}
+
 declare global {
   interface Window {
     YT: {
-      Player: new (id: string, config: any) => any
+      Player: new (id: string, config: Record<string, unknown>) => YouTubePlayer
       PlayerState: { PLAYING: number; ENDED: number }
     }
     onYouTubeIframeAPIReady: () => void
@@ -16,7 +29,7 @@ declare global {
 }
 
 export function YouTubeAudio() {
-  const playerRef = useRef<any>(null)
+  const playerRef = useRef<YouTubePlayer | null>(null)
   const [isReady, setIsReady] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(false)
@@ -47,7 +60,7 @@ export function YouTubeAudio() {
           showinfo: 0,
         },
         events: {
-          onReady: (event: { target: any }) => {
+          onReady: (event: YouTubeEvent) => {
             setIsReady(true)
             event.target.setVolume(30)
             // Tentar reproduzir imediatamente e após qualquer interação
@@ -72,7 +85,7 @@ export function YouTubeAudio() {
             // Tentar novamente após 500ms
             setTimeout(tryPlay, 500)
           },
-          onStateChange: (event: { data: number; target: any }) => {
+          onStateChange: (event: YouTubeEvent) => {
             setIsPlaying(event.data === window.YT.PlayerState.PLAYING)
             // Loop manual
             if (event.data === window.YT.PlayerState.ENDED) {

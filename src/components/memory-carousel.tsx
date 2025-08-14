@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import type { EmblaOptionsType } from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 export type MemoryItem = {
@@ -40,7 +41,12 @@ export function MemoryCarousel({ items, className, options }: MemoryCarouselProp
               {item.text ? <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">{item.text}</p> : null}
               {item.imageUrl ? (
                 <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg bg-muted">
-                  <img src={item.imageUrl} alt={item.title || 'memória'} className="absolute inset-0 h-full w-full object-cover" />
+                  <Image 
+                    src={item.imageUrl} 
+                    alt={item.title || 'memória'} 
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               ) : null}
             </div>
