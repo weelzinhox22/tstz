@@ -41,7 +41,7 @@ export function EnhancedTimeline() {
             <div className="text-5xl mb-4"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-amber-700 dark:text-amber-300">Infelizmente nem tudo são flores</h3>
             <p className="text-base sm:text-lg text-foreground/90 leading-relaxed">
-              assim como tivemos muitos momentos bons, tivemos muitos momentos ruins também, muitas idas e vindas, muitas "brigas" e muitas conversas afim de nos resolvermos, eu nem sei pq to falando isso aqui kkk era pra ser só um pedido de desculpas mesmo.
+              assim como tivemos muitos momentos bons, tivemos muitos momentos ruins também, muitas idas e vindas, muitas &ldquo;brigas&rdquo; e muitas conversas afim de nos resolvermos, eu nem sei pq to falando isso aqui kkk era pra ser só um pedido de desculpas mesmo.
             </p>
           </div>
         </div>

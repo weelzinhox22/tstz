@@ -45,7 +45,7 @@ export function EnhancedCardGrid({ sections, className }: EnhancedCardGridProps)
                       <div className="h-2 w-2 rounded-full bg-pink-400 animate-pulse" />
                     )}
                     {isQuote && (
-                      <div className="text-blue-400 text-xl">"</div>
+                      <div className="text-blue-400 text-xl">&ldquo;</div>
                     )}
                     <h2 className={cn(
                       'font-semibold',
@@ -66,7 +66,7 @@ export function EnhancedCardGrid({ sections, className }: EnhancedCardGridProps)
                   </p>
                   
                   {isQuote && (
-                    <div className="text-blue-400 text-xl text-right">"</div>
+                    <div className="text-blue-400 text-xl text-right">&rdquo;</div>
                   )}
                 </div>
               </CardContent>

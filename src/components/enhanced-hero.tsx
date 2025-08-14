@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TypeWriter } from './typewriter'
-import { Separator } from './ui/separator'
 import { ScrollReveal } from './scroll-reveal'
 
 gsap.registerPlugin(ScrollTrigger)

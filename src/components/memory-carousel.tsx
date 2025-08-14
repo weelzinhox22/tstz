@@ -1,7 +1,8 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
-import useEmblaCarousel, { type EmblaOptionsType } from 'embla-carousel-react'
+import useEmblaCarousel from 'embla-carousel-react'
+import type { EmblaOptionsType } from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
 import { cn } from '@/lib/utils'
 
@@ -23,8 +24,9 @@ export function MemoryCarousel({ items, className, options }: MemoryCarouselProp
   const [emblaRef] = useEmblaCarousel({ loop: true, align: 'center', ...options }, [autoplay.current])
 
   useEffect(() => {
+    const autoplayInstance = autoplay.current
     return () => {
-      autoplay.current?.destroy?.()
+      autoplayInstance?.destroy?.()
     }
   }, [])
 

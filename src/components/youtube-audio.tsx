@@ -7,7 +7,10 @@ import { MusicNotification } from './music-notification'
 
 declare global {
   interface Window {
-    YT: any
+    YT: {
+      Player: new (id: string, config: any) => any
+      PlayerState: { PLAYING: number; ENDED: number }
+    }
     onYouTubeIframeAPIReady: () => void
   }
 }
@@ -44,7 +47,7 @@ export function YouTubeAudio() {
           showinfo: 0,
         },
         events: {
-          onReady: (event: any) => {
+          onReady: (event: { target: any }) => {
             setIsReady(true)
             event.target.setVolume(30)
             // Tentar reproduzir imediatamente e após qualquer interação
@@ -69,7 +72,7 @@ export function YouTubeAudio() {
             // Tentar novamente após 500ms
             setTimeout(tryPlay, 500)
           },
-          onStateChange: (event: any) => {
+          onStateChange: (event: { data: number; target: any }) => {
             setIsPlaying(event.data === window.YT.PlayerState.PLAYING)
             // Loop manual
             if (event.data === window.YT.PlayerState.ENDED) {

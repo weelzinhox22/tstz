@@ -144,7 +144,7 @@ export function CrumpledNotes() {
         <ScrollReveal y={8} delay={0.3}>
           <div className="text-center mt-16">
             <p className="text-sm text-muted-foreground/70 italic max-w-md mx-auto">
-              "cada bilhetinho que eu não tive coragem de te dar..."
+              &ldquo;cada bilhetinho que eu não tive coragem de te dar...&rdquo;
             </p>
           </div>
         </ScrollReveal>
