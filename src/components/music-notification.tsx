@@ -37,7 +37,7 @@ export function MusicNotification({ onMute }: MusicNotificationProps) {
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: -20, scale: 0.95 }}
-          transition={{ duration: 0.4, ease: 'back.out' }}
+          transition={{ duration: 0.4, ease: 'backOut' }}
           className="fixed top-6 right-6 z-[60] max-w-sm"
         >
           <div className="relative rounded-2xl border border-border/60 bg-card/95 backdrop-blur-md shadow-2xl p-5">
