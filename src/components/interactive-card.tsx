@@ -16,7 +16,7 @@ export function InteractiveCard({ className, children }: InteractiveCardProps) {
   const ref = useRef<HTMLDivElement | null>(null)
   const rotateXTo = useRef<ReturnType<typeof gsap.quickTo> | null>(null)
   const rotateYTo = useRef<ReturnType<typeof gsap.quickTo> | null>(null)
-  const shadowTo = useRef<ReturnType<typeof gsap.quickTo> | null>(null)
+
 
   useEffect(() => {
     if (!ref.current) return
@@ -54,7 +54,6 @@ export function InteractiveCard({ className, children }: InteractiveCardProps) {
 
     rotateXTo.current = gsap.quickTo(el, 'rotateX', { duration: 0.3, ease: 'power3' })
     rotateYTo.current = gsap.quickTo(el, 'rotateY', { duration: 0.3, ease: 'power3' })
-    shadowTo.current = gsap.quickTo(el, 'boxShadow', { duration: 0.3, ease: 'power3' })
 
     function onPointerMove(e: PointerEvent) {
       const rect = el.getBoundingClientRect()
@@ -66,7 +65,8 @@ export function InteractiveCard({ className, children }: InteractiveCardProps) {
       rotateYTo.current?.(tiltY)
       const shadowX = (relX - 0.5) * 20
       const shadowY = (relY - 0.5) * 20
-      shadowTo.current?.(`${shadowX}px ${shadowY}px 40px rgba(0,0,0,0.18)`) // will be overridden by scroll scrub too
+      // Use gsap.set instead of quickTo for boxShadow
+      gsap.set(el, { boxShadow: `${shadowX}px ${shadowY}px 40px rgba(0,0,0,0.18)` })
     }
 
     function onPointerLeave() {

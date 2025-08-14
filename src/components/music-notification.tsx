@@ -42,14 +42,12 @@ export function MusicNotification({ onMute }: MusicNotificationProps) {
         >
           <div className="relative rounded-2xl border border-border/60 bg-card/95 backdrop-blur-md shadow-2xl p-5">
             {/* Close button */}
-            <Button
-              variant="ghost"
-              size="icon"
+            <button
               onClick={handleDismiss}
-              className="absolute -top-2 -right-2 h-6 w-6 rounded-full bg-background shadow-md"
+              className="absolute -top-2 -right-2 h-6 w-6 rounded-full bg-background shadow-md border border-border/60 flex items-center justify-center hover:bg-muted transition-colors"
             >
               <X className="h-3 w-3" />
-            </Button>
+            </button>
 
             {/* Content */}
             <div className="space-y-4">
