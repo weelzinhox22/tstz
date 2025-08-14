@@ -1,0 +1,112 @@
+'use client'
+
+import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { TypeWriter } from './typewriter'
+import { Separator } from './ui/separator'
+import { ScrollReveal } from './scroll-reveal'
+
+gsap.registerPlugin(ScrollTrigger)
+
+export function EnhancedHero() {
+  const containerRef = useRef<HTMLDivElement | null>(null)
+  const layer1Ref = useRef<HTMLDivElement | null>(null)
+  const layer2Ref = useRef<HTMLDivElement | null>(null)
+  const layer3Ref = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    const container = containerRef.current
+    const layer1 = layer1Ref.current
+    const layer2 = layer2Ref.current
+    const layer3 = layer3Ref.current
+    if (!container || !layer1 || !layer2 || !layer3) return
+
+    const ctx = gsap.context(() => {
+      // Parallax layers com velocidades diferentes
+      gsap.to(layer1, {
+        yPercent: -30,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: container,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+        },
+      })
+      
+      gsap.to(layer2, {
+        yPercent: -15,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: container,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+        },
+      })
+      
+      gsap.to(layer3, {
+        yPercent: -8,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: container,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+        },
+      })
+    })
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section ref={containerRef} className="relative isolate min-h-[100svh] grid place-items-center overflow-hidden">
+      {/* Layer 1 - Background gradients */}
+      <div ref={layer1Ref} className="absolute inset-0 -z-30">
+        <div className="absolute inset-0 bg-[radial-gradient(140%_90%_at_30%_-10%,rgba(255,0,120,0.08),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_70%_110%,rgba(0,120,255,0.06),transparent_50%)]" />
+      </div>
+      
+      {/* Layer 2 - Noise texture */}
+      <div ref={layer2Ref} className="absolute inset-0 -z-20 mix-blend-overlay opacity-[0.03]">
+        <div className="h-full w-full [background-image:repeating-linear-gradient(0deg,rgba(255,255,255,0.5)_0_1px,transparent_1px_2px),repeating-linear-gradient(90deg,rgba(255,255,255,0.3)_0_1px,transparent_1px_3px)]" />
+      </div>
+      
+      {/* Layer 3 - Floating elements */}
+      <div ref={layer3Ref} className="absolute inset-0 -z-10">
+        <div className="absolute left-[10%] top-[20%] h-32 w-32 rounded-full bg-gradient-to-br from-pink-200/20 to-transparent blur-xl" />
+        <div className="absolute right-[15%] top-[60%] h-24 w-24 rounded-full bg-gradient-to-br from-blue-200/20 to-transparent blur-lg" />
+        <div className="absolute left-[70%] bottom-[30%] h-40 w-40 rounded-full bg-gradient-to-br from-purple-200/15 to-transparent blur-2xl" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-6 py-24 text-center">
+        <ScrollReveal>
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight bg-gradient-to-br from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent">
+            oi, turubom
+          </h1>
+        </ScrollReveal>
+        
+        <div className="flex items-center justify-center my-8">
+          <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent w-32" />
+          <div className="mx-4 h-1 w-1 rounded-full bg-foreground/60" />
+          <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent w-32" />
+        </div>
+        
+        <ScrollReveal y={16} delay={0.2}>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto">
+            <TypeWriter text="não sei como falar o que sinto direito com você, não sei se você vai querer ler, mas abaixo está mais ou menos como estou me sentindo nos últimos meses" speedMs={28} />
+          </p>
+        </ScrollReveal>
+        
+        <ScrollReveal y={12} delay={0.4}>
+          <div className="mt-12 text-sm text-muted-foreground/60 font-mono">
+            ↓ role para descobrir
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  )
+}
