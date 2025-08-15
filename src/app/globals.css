@@ -120,3 +120,44 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Anti-print styles */
+@media print {
+  * {
+    visibility: hidden !important;
+    display: none !important;
+  }
+  
+  body::after {
+    content: "Esta página não pode ser impressa." !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 24px !important;
+    color: black !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+}
+
+/* Disable screenshot on mobile */
+@media screen {
+  body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Disable drag */
+  * {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+}

@@ -149,7 +149,7 @@ export default function Home() {
 
         {/* Forgiveness Section */}
         <ForgivenessSection />
-      </div>
+        </div>
     </div>
   );
 }
