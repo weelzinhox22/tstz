@@ -15,7 +15,7 @@ export function ForgivenessSection() {
     if (answer === 'yes') {
       // Redirecionar para WhatsApp
       setTimeout(() => {
-        window.open('https://wa.me/5571991373142?text=Oi%2C%20eu%20li%20sua%20carta%20e%20te%desculpo%20%E2%9D%A4%EF%B8%8F', '_blank')
+        window.open('https://wa.me/5571991373142?text=eu%20li%20sua%20carta%20e%20te%20desculpo', '_blank');
       }, 1500)
     }
   }
