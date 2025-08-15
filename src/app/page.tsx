@@ -73,11 +73,17 @@ const sections: { id: string; title: string; text: string }[] = [
     text:
       'a eu ia falar um ngc aqui mas resolvi apagar, então vou deixar só o final... Na verdade oxe, não namore com ninguém não 👍🏾'
   },
-  {
+    {
     id: 'love',
     title: 'você vai ser pra sempre minha pessoa',
     text:
       'Bom, acho que aqui eu devia colocar que te amo né, vendo tudo que tá acontecendo na minha cabeça e no meu peito, não tenho como negar, eu acho que vou estar para sempre preso em você, você sempre volta pra minha mente, não importa quanto tempo passe. me desculpa por tudo, desejo tudo de melhor na sua vida sempre! se cuida, meu bem. 💖'
+  },
+  {
+    id: 'quote',
+    title: '',
+    text:
+      '"Geleiras vão derreter, estrelas vão se apagar e eu pensando em ter você"'
   }
 ]
 

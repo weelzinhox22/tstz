@@ -167,7 +167,7 @@ export function SpotifyPlaylist() {
 
         {/* Bottom text */}
         <p className="text-lg text-muted-foreground/70 mt-8 italic">
-        &quot;geleiras vão derreter, estrelas vão se apagar e eu pensando em ter você...&quot;
+        
         </p>
       </div>
     </section>
