@@ -104,122 +104,13 @@ export function AntiPrint() {
       }, 500);
     };
 
-    // Enhanced mobile screenshot protection
+    // Blur content when window loses focus (potential screenshot)
     const handleVisibilityChange = () => {
       if (document.hidden) {
-        document.body.style.filter = 'blur(20px)';
-        document.body.style.opacity = '0.1';
-        
-        // Show warning overlay
-        const overlay = document.createElement('div');
-        overlay.id = 'screenshot-warning';
-        overlay.style.cssText = `
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: black;
-          color: white;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 24px;
-          font-family: Arial, sans-serif;
-          z-index: 999999;
-          text-align: center;
-          padding: 20px;
-        `;
-        overlay.innerHTML = '🚫<br/>Screenshot bloqueado<br/>Página protegida';
-        document.body.appendChild(overlay);
-        
-        // Vibrate if supported
-        if (navigator.vibrate) {
-          navigator.vibrate([200, 100, 200]);
-        }
+        document.body.style.filter = 'blur(10px)';
       } else {
         document.body.style.filter = 'none';
-        document.body.style.opacity = '1';
-        
-        // Remove warning overlay
-        const overlay = document.getElementById('screenshot-warning');
-        if (overlay) {
-          overlay.remove();
-        }
       }
-    };
-
-    // Mobile-specific screenshot detection
-    const detectMobileScreenshot = () => {
-      // Detect volume buttons combination (common screenshot gesture)
-      let volumeUpPressed = false;
-      let volumeDownPressed = false;
-      let powerPressed = false;
-      
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'VolumeUp') volumeUpPressed = true;
-        if (e.key === 'VolumeDown') volumeDownPressed = true;
-        if (e.key === 'Power') powerPressed = true;
-        
-        // Screenshot gesture detected
-        if ((volumeUpPressed && powerPressed) || (volumeDownPressed && powerPressed)) {
-          e.preventDefault();
-          document.body.style.visibility = 'hidden';
-          
-          setTimeout(() => {
-            document.body.style.visibility = 'visible';
-          }, 1000);
-          
-          if (navigator.vibrate) {
-            navigator.vibrate([300, 200, 300, 200, 300]);
-          }
-        }
-      };
-      
-      const handleKeyUp = (e: KeyboardEvent) => {
-        if (e.key === 'VolumeUp') volumeUpPressed = false;
-        if (e.key === 'VolumeDown') volumeDownPressed = false;
-        if (e.key === 'Power') powerPressed = false;
-      };
-      
-      document.addEventListener('keydown', handleKeyDown);
-      document.addEventListener('keyup', handleKeyUp);
-      
-      return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('keyup', handleKeyUp);
-      };
-    };
-
-    // Touch gesture detection for screenshots
-    const detectTouchGestures = () => {
-      let touches: Touch[] = [];
-      
-      const handleTouchStart = (e: TouchEvent) => {
-        touches = Array.from(e.touches);
-        
-        // 3-finger gesture (common in some devices)
-        if (touches.length >= 3) {
-          e.preventDefault();
-          document.body.style.filter = 'blur(30px)';
-          document.body.style.opacity = '0.1';
-          
-          setTimeout(() => {
-            document.body.style.filter = 'none';
-            document.body.style.opacity = '1';
-          }, 2000);
-          
-          if (navigator.vibrate) {
-            navigator.vibrate([500]);
-          }
-        }
-      };
-      
-      document.addEventListener('touchstart', handleTouchStart, { passive: false });
-      
-      return () => {
-        document.removeEventListener('touchstart', handleTouchStart);
-      };
     };
 
     // Add event listeners
@@ -230,8 +121,6 @@ export function AntiPrint() {
     // Apply protections
     disableSelection();
     detectDevTools();
-    const cleanupMobile = detectMobileScreenshot();
-    const cleanupTouch = detectTouchGestures();
 
     // Console warning
     console.clear();
@@ -245,10 +134,6 @@ export function AntiPrint() {
       document.removeEventListener('keydown', disableShortcuts);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       
-      // Cleanup mobile protections
-      cleanupMobile();
-      cleanupTouch();
-      
       // Reset styles
       const bodyStyle = document.body.style as CSSStyleDeclaration & {
         webkitUserSelect?: string;
@@ -260,14 +145,6 @@ export function AntiPrint() {
       bodyStyle.mozUserSelect = 'auto';
       bodyStyle.msUserSelect = 'auto';
       document.body.style.filter = 'none';
-      document.body.style.opacity = '1';
-      document.body.style.visibility = 'visible';
-      
-      // Remove any remaining overlays
-      const overlay = document.getElementById('screenshot-warning');
-      if (overlay) {
-        overlay.remove();
-      }
     };
   }, []);
 
