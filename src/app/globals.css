@@ -141,7 +141,7 @@
   }
 }
 
-/* Disable screenshot on mobile */
+/* Enhanced mobile screenshot protection */
 @media screen {
   body {
     -webkit-touch-callout: none;
@@ -150,14 +150,42 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    
+    /* Prevent screenshot on iOS */
+    -webkit-app-region: no-drag;
+    -webkit-user-modify: read-only;
+    
+    /* Prevent screenshot on Android */
+    overscroll-behavior: none;
+    touch-action: manipulation;
   }
   
-  /* Disable drag */
+  /* Disable drag and save */
   * {
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
     user-drag: none;
+    
+    /* Prevent long press context menu */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    
+    /* Disable image saving */
+    pointer-events: none;
+  }
+  
+  /* Re-enable pointer events for interactive elements */
+  button, a, input, textarea, select, [role="button"], [tabindex] {
+    pointer-events: auto;
+  }
+  
+  /* Hide content during screenshot attempts */
+  @media (hover: none) and (pointer: coarse) {
+    body:not(:focus-within) {
+      filter: blur(10px);
+      opacity: 0.3;
+    }
   }
 }
