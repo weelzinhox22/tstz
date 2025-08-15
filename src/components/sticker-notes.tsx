@@ -14,10 +14,10 @@ type StickerNote = {
 }
 
 const stickerNotes: StickerNote[] = [
-  { id: '1', text: 'eu tenho pensado em você com muita frequência', color: 'yellow', rotation: -3, size: 'md' },
+  { id: '1', text: 'o tempo passa e o que fica é você', color: 'yellow', rotation: -3, size: 'md' },
   { id: '2', text: 'mozamore 💕', color: 'pink', rotation: 5, size: 'sm' },
   { id: '3', text: 'espero que em algum mundo, a gente tenha ficado juntos', color: 'blue', rotation: -7, size: 'lg' },
-  { id: '4', text: 'você não sai da minha cabeça', color: 'green', rotation: 2, size: 'md' },
+  { id: '4', text: 'AAAAAAAAAAAAA', color: 'green', rotation: 2, size: 'md' },
   { id: '5', text: 'sdds dos filmes', color: 'yellow', rotation: -4, size: 'md' },
   { id: '6', text: 'sdds das farofas', color: 'pink', rotation: 8, size: 'sm' }
 ]

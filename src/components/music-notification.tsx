@@ -58,7 +58,7 @@ export function MusicNotification({ onMute }: MusicNotificationProps) {
               </div>
               
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Uma música especial acompanha esta carta. 
+                Tem uma música que retrata mais ou menos como eu me sinto em relação a tudo.
                 Prefere ler em silêncio?
               </p>
               

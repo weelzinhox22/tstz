@@ -25,7 +25,7 @@ export function EnhancedMemories({ memories }: EnhancedMemoriesProps) {
               <div className="h-px bg-gradient-to-l from-transparent to-pink-300 w-8" />
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 bg-clip-text text-transparent">
-              o que eu mais me lembro e fico rindo sksksksk
+              coisas que não vou esquecer
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               essas coisas simples que você fazia e que eu nunca vou conseguir esquecer
@@ -49,7 +49,7 @@ export function EnhancedMemories({ memories }: EnhancedMemoriesProps) {
         <ScrollReveal y={8} delay={0.2}>
           <div className="text-center mt-12">
             <p className="text-sm text-muted-foreground/70 italic">
-              cada lembrança dessas ainda me faz sorrir...
+              cada lembrança dessas me faz ver que apesar de tudo, você continua sendo a pessoa.
             </p>
           </div>
         </ScrollReveal>

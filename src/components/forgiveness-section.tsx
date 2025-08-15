@@ -20,7 +20,7 @@ export function ForgivenessSection() {
     }
   }
 
-  const whatsappMessage = encodeURIComponent('Oi, eu li sua carta e te perdoo ❤️')
+  const whatsappMessage = encodeURIComponent('Oi, eu li sua carta e te desculpo.')
 
   return (
     <SectionLayout variant="narrow" spacing="xl">
@@ -42,10 +42,12 @@ export function ForgivenessSection() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                quero deixar claro que <strong>não estou pedindo pra voltar</strong> e nem nada do tipo
+                <strong>não é um pedido para voltar</strong> e nem nada do tipo
               </p>
               <p className="text-base sm:text-lg text-muted-foreground/80 leading-relaxed">
-                é apenas um pedido de desculpas sincero por tudo que aconteceu entre nós
+                é apenas um pedido de desculpas por tudo que aconteceu entre nós.
+                <br />
+                a falta de qualquer mensagem ou retorno, vou entender como um "não"
               </p>
               <p className="text-sm text-muted-foreground/60 italic">
                 só quero que você saiba que eu reconheço meus erros e sinto muito

@@ -98,7 +98,7 @@ export function CrumpledNotes() {
               bilhetinhos amassados
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              coisas que eu escrevi e amassava porque não sabia se devia te mandar
+              
             </p>
           </div>
         </ScrollReveal>
@@ -144,7 +144,7 @@ export function CrumpledNotes() {
         <ScrollReveal y={8} delay={0.3}>
           <div className="text-center mt-16">
             <p className="text-sm text-muted-foreground/70 italic max-w-md mx-auto">
-              &ldquo;cada bilhetinho que eu não tive coragem de te dar...&rdquo;
+              &ldquo;cada bilhetinho que eu sabia que não deveria te dar...&rdquo;
             </p>
           </div>
         </ScrollReveal>
