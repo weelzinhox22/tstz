@@ -13,6 +13,7 @@ export function EnhancedHero() {
   const layer1Ref = useRef<HTMLDivElement | null>(null)
   const layer2Ref = useRef<HTMLDivElement | null>(null)
   const layer3Ref = useRef<HTMLDivElement | null>(null)
+  const videoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
     const container = containerRef.current
@@ -60,15 +61,63 @@ export function EnhancedHero() {
     return () => ctx.revert()
   }, [])
 
+  // Garantir que o vídeo toque no mobile
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const handleUserInteraction = () => {
+      video.play().catch(() => {
+        // Se falhar, pelo menos tenta novamente
+        setTimeout(() => {
+          video.play().catch(console.log)
+        }, 1000)
+      })
+    }
+
+    // Tenta tocar o vídeo quando há interação do usuário
+    document.addEventListener('touchstart', handleUserInteraction, { once: true })
+    document.addEventListener('click', handleUserInteraction, { once: true })
+
+    // Tenta tocar o vídeo imediatamente
+    const playVideo = () => {
+      if (video.readyState >= 3) {
+        video.play().catch(console.log)
+      }
+    }
+
+    video.addEventListener('canplay', playVideo)
+    playVideo()
+
+    return () => {
+      document.removeEventListener('touchstart', handleUserInteraction)
+      document.removeEventListener('click', handleUserInteraction)
+      video.removeEventListener('canplay', playVideo)
+    }
+  }, [])
+
   return (
     <section ref={containerRef} className="relative isolate min-h-[100svh] grid place-items-center overflow-hidden">
       {/* Video Background */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
+        webkit-playsinline="true"
+        x5-playsinline="true"
         className="absolute inset-0 w-full h-full object-cover scale-110 -z-40"
+        style={{
+          objectFit: 'cover',
+          width: '100%',
+          height: '100%'
+        }}
+        onLoadedData={(e) => {
+          const video = e.target as HTMLVideoElement;
+          video.play().catch(console.log);
+        }}
       >
         <source src="/assets/videos/bg.mp4" type="video/mp4" />
       </video>
