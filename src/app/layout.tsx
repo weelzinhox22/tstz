@@ -5,7 +5,6 @@ import { LenisProvider } from "@/components/lenis-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ScrollProgress } from "@/components/scroll-progress";
-import { YouTubeAudio } from "@/components/youtube-audio";
 import { AntiPrint } from "@/components/anti-print";
 
 const geistSans = Geist({
@@ -37,7 +36,6 @@ export default function RootLayout({
           <LenisProvider>
             <AntiPrint />
             <ScrollProgress />
-            <YouTubeAudio />
             <div className="fixed right-3 top-3 z-50">
               <ThemeToggle />
             </div>
