@@ -63,7 +63,11 @@ export function AntiPrint() {
 
     // Disable text selection
     const disableSelection = () => {
-      const bodyStyle = document.body.style as any;
+      const bodyStyle = document.body.style as CSSStyleDeclaration & {
+        webkitUserSelect?: string;
+        mozUserSelect?: string;
+        msUserSelect?: string;
+      };
       bodyStyle.userSelect = 'none';
       bodyStyle.webkitUserSelect = 'none';
       bodyStyle.mozUserSelect = 'none';
@@ -131,7 +135,11 @@ export function AntiPrint() {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       
       // Reset styles
-      const bodyStyle = document.body.style as any;
+      const bodyStyle = document.body.style as CSSStyleDeclaration & {
+        webkitUserSelect?: string;
+        mozUserSelect?: string;
+        msUserSelect?: string;
+      };
       bodyStyle.userSelect = 'auto';
       bodyStyle.webkitUserSelect = 'auto';
       bodyStyle.mozUserSelect = 'auto';
