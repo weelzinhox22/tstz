@@ -63,10 +63,11 @@ export function AntiPrint() {
 
     // Disable text selection
     const disableSelection = () => {
-      document.body.style.userSelect = 'none';
-      document.body.style.webkitUserSelect = 'none';
-      document.body.style.mozUserSelect = 'none';
-      document.body.style.msUserSelect = 'none';
+      const bodyStyle = document.body.style as any;
+      bodyStyle.userSelect = 'none';
+      bodyStyle.webkitUserSelect = 'none';
+      bodyStyle.mozUserSelect = 'none';
+      bodyStyle.msUserSelect = 'none';
     };
 
     // Detect dev tools
@@ -130,10 +131,11 @@ export function AntiPrint() {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       
       // Reset styles
-      document.body.style.userSelect = 'auto';
-      document.body.style.webkitUserSelect = 'auto';
-      document.body.style.mozUserSelect = 'auto';
-      document.body.style.msUserSelect = 'auto';
+      const bodyStyle = document.body.style as any;
+      bodyStyle.userSelect = 'auto';
+      bodyStyle.webkitUserSelect = 'auto';
+      bodyStyle.mozUserSelect = 'auto';
+      bodyStyle.msUserSelect = 'auto';
       document.body.style.filter = 'none';
     };
   }, []);
