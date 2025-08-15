@@ -47,7 +47,7 @@ export function ForgivenessSection() {
               <p className="text-base sm:text-lg text-muted-foreground/80 leading-relaxed">
                 é apenas um pedido de desculpas por tudo que aconteceu entre nós.
                 <br />
-                a falta de qualquer mensagem ou retorno, vou entender como um "não"
+                a falta de qualquer mensagem ou retorno, vou entender como um &quot;não&quot;
               </p>
               <p className="text-sm text-muted-foreground/60 italic">
                 só quero que você saiba que eu reconheço meus erros e sinto muito
