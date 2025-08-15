@@ -25,43 +25,58 @@ export function EnhancedHero() {
     if (!container || !layer1 || !layer2 || !layer3) return
 
     const ctx = gsap.context(() => {
-      // Parallax layers com velocidades diferentes
-      gsap.to(layer1, {
-        yPercent: -30,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: container,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true,
-        },
-      })
-      
-      gsap.to(layer2, {
-        yPercent: -15,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: container,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true,
-        },
-      })
-      
-      gsap.to(layer3, {
-        yPercent: -8,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: container,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true,
-        },
-      })
+      // Parallax reduzido no mobile
+      if (!isMobile) {
+        // Parallax layers com velocidades diferentes - apenas desktop
+        gsap.to(layer1, {
+          yPercent: -30,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: container,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+          },
+        })
+        
+        gsap.to(layer2, {
+          yPercent: -15,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: container,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+          },
+        })
+        
+        gsap.to(layer3, {
+          yPercent: -8,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: container,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+          },
+        })
+      } else {
+        // Parallax simples para mobile
+        gsap.to(layer1, {
+          yPercent: -10,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: container,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1, // Menos smooth, mais performance
+          },
+        })
+      }
     })
 
     return () => ctx.revert()
-  }, [])
+  }, [isMobile])
 
   // Garantir que o vídeo toque no mobile
   useEffect(() => {
@@ -133,10 +148,12 @@ export function EnhancedHero() {
         <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_70%_110%,rgba(0,120,255,0.06),transparent_50%)]" />
       </div>
       
-      {/* Layer 2 - Noise texture */}
-      <div ref={layer2Ref} className="absolute inset-0 -z-10 mix-blend-overlay opacity-[0.03]">
-        <div className="h-full w-full [background-image:repeating-linear-gradient(0deg,rgba(255,255,255,0.5)_0_1px,transparent_1px_2px),repeating-linear-gradient(90deg,rgba(255,255,255,0.3)_0_1px,transparent_1px_3px)]" />
-      </div>
+      {/* Layer 2 - Noise texture - apenas desktop */}
+      {!isMobile && (
+        <div ref={layer2Ref} className="absolute inset-0 -z-10 mix-blend-overlay opacity-[0.03]">
+          <div className="h-full w-full [background-image:repeating-linear-gradient(0deg,rgba(255,255,255,0.5)_0_1px,transparent_1px_2px),repeating-linear-gradient(90deg,rgba(255,255,255,0.3)_0_1px,transparent_1px_3px)]" />
+        </div>
+      )}
       
       {/* Layer 3 - Floating elements - reduzidos no mobile */}
       <div ref={layer3Ref} className="absolute inset-0 -z-5">
