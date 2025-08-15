@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useMobile } from '@/hooks/use-mobile';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,6 +12,7 @@ export function SpotifyPlaylist() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const iframeRef = useRef<HTMLDivElement>(null);
+  const isMobile = useMobile();
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -98,20 +100,20 @@ export function SpotifyPlaylist() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-pink-900/5 to-blue-900/10 dark:from-purple-500/5 dark:via-pink-500/3 dark:to-blue-500/5" />
       
-      {/* Floating music notes */}
+      {/* Floating music notes - reduzidos no mobile */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(6)].map((_, i) => (
+        {[...Array(isMobile ? 3 : 6)].map((_, i) => (
           <div
             key={i}
             className="absolute animate-float"
             style={{
-              left: `${15 + i * 15}%`,
+              left: `${15 + i * (isMobile ? 25 : 15)}%`,
               top: `${20 + (i % 3) * 25}%`,
-              animationDelay: `${i * 0.8}s`,
-              animationDuration: `${3 + i * 0.5}s`
+              animationDelay: `${i * (isMobile ? 1.2 : 0.8)}s`,
+              animationDuration: `${(isMobile ? 4 : 3) + i * 0.5}s`
             }}
           >
-            <span className="text-2xl opacity-20 dark:opacity-10">
+            <span className={`text-2xl opacity-20 dark:opacity-10 ${isMobile ? 'text-xl' : ''}`}>
               {i % 4 === 0 ? '♫' : i % 4 === 1 ? '♪' : i % 4 === 2 ? '♬' : '♩'}
             </span>
           </div>

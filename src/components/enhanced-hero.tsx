@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TypeWriter } from './typewriter'
 import { ScrollReveal } from './scroll-reveal'
+import { useMobile } from '@/hooks/use-mobile'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,6 +15,7 @@ export function EnhancedHero() {
   const layer2Ref = useRef<HTMLDivElement | null>(null)
   const layer3Ref = useRef<HTMLDivElement | null>(null)
   const videoRef = useRef<HTMLVideoElement | null>(null)
+  const isMobile = useMobile()
 
   useEffect(() => {
     const container = containerRef.current
@@ -136,11 +138,11 @@ export function EnhancedHero() {
         <div className="h-full w-full [background-image:repeating-linear-gradient(0deg,rgba(255,255,255,0.5)_0_1px,transparent_1px_2px),repeating-linear-gradient(90deg,rgba(255,255,255,0.3)_0_1px,transparent_1px_3px)]" />
       </div>
       
-      {/* Layer 3 - Floating elements */}
+      {/* Layer 3 - Floating elements - reduzidos no mobile */}
       <div ref={layer3Ref} className="absolute inset-0 -z-5">
-        <div className="absolute left-[10%] top-[20%] h-32 w-32 rounded-full bg-gradient-to-br from-pink-200/20 to-transparent blur-xl" />
-        <div className="absolute right-[15%] top-[60%] h-24 w-24 rounded-full bg-gradient-to-br from-blue-200/20 to-transparent blur-lg" />
-        <div className="absolute left-[70%] bottom-[30%] h-40 w-40 rounded-full bg-gradient-to-br from-purple-200/15 to-transparent blur-2xl" />
+        <div className={`absolute left-[10%] top-[20%] rounded-full bg-gradient-to-br from-pink-200/20 to-transparent blur-xl ${isMobile ? 'h-16 w-16' : 'h-32 w-32'}`} />
+        {!isMobile && <div className="absolute right-[15%] top-[60%] h-24 w-24 rounded-full bg-gradient-to-br from-blue-200/20 to-transparent blur-lg" />}
+        <div className={`absolute left-[70%] bottom-[30%] rounded-full bg-gradient-to-br from-purple-200/15 to-transparent blur-2xl ${isMobile ? 'h-20 w-20' : 'h-40 w-40'}`} />
       </div>
 
       {/* Content */}
@@ -159,7 +161,7 @@ export function EnhancedHero() {
         
         <ScrollReveal y={16} delay={0.4}>
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed max-w-3xl mx-auto drop-shadow-md">
-            <TypeWriter text="não sei como falar o que sinto direito com você, não sei se você vai querer ler, mas abaixo está mais ou menos como estou me sentindo nos últimos meses" speedMs={28} />
+            <TypeWriter text="não sei como falar o que sinto direito com você, não sei se você vai querer ler, mas abaixo está mais ou menos como estou me sentindo nos últimos meses" speedMs={isMobile ? 35 : 28} />
           </p>
         </ScrollReveal>
         

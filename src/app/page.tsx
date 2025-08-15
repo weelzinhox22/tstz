@@ -17,7 +17,7 @@ const sections: { id: string; title: string; text: string }[] = [
     id: 'intro',
     title: 'oi',
     text:
-      'oi, essa é a milésima coisa que escrevo para você e não sei como te mostrar ou se devo mostrar, mas... eu não consigo te esquecer. você não sai da minha cabeça, eu não consigo parar de pensar em você, não importa quanto tempo passe, não importa o que tenha acontecido, você simplesmente não sai da minha cabeça.'
+      'oi, essa é a milésima coisa que escrevo para você e não sei como te mostrar ou se devo mostrar, mas... eu acho que as coisas ficaram mal resolvidas, pelo menos pra mim, são dias sem dormir direito, eu acho que te devo desculpa por tudo que aconteceu, e eu acho que não pedi, de uns meses pra cá eu não consigo esquecer tudo, então tive que escrever isso, eu espero muito que você veja tudo... você não sai da minha cabeça, eu não consigo parar de pensar em você, não importa quanto tempo passe, não importa o que tenha acontecido, você simplesmente não sai da minha cabeça.'
   },
   {
     id: 'forever',
