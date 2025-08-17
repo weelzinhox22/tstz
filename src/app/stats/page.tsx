@@ -4,14 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-
-type Stats = {
-  yes: number
-  no: number
-  total: number
-  yesPercentage: number
-  noPercentage: number
-}
+import type { Stats } from '@/types/stats'
 
 export default function StatsPage() {
   const [stats, setStats] = useState<Stats | null>(null)
