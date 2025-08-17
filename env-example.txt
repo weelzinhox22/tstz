@@ -1,0 +1,11 @@
+# Upstash Redis Configuration
+# These variables are automatically set by Vercel when you connect Upstash
+
+KV_REST_API_URL="https://arriving-narwhal-19236.upstash.io"
+KV_REST_API_TOKEN="AUskAAIncDEwOTY0OTA2MmZkNzA0MWM2YTIxN2Q3NjA1N2FjOTM3ZXAxMTkyMzY"
+
+# Alternative variables (Upstash also sets these)
+UPSTASH_REDIS_REST_URL="https://arriving-narwhal-19236.upstash.io"
+UPSTASH_REDIS_REST_TOKEN="AUskAAIncDEwOTY0OTA2MmZkNzA0MWM2YTIxN2Q3NjA1N2FjOTM3ZXAxMTkyMzY"
+
+# Note: Redis.fromEnv() automatically detects and uses these variables

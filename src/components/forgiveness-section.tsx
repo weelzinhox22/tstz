@@ -8,9 +8,26 @@ import { Instagram, MessageSquare } from 'lucide-react'
 
 export function ForgivenessSection() {
   const [response, setResponse] = useState<'yes' | 'no' | null>(null)
+  const [isTracking, setIsTracking] = useState(false)
 
-  const handleResponse = (answer: 'yes' | 'no') => {
+  const handleResponse = async (answer: 'yes' | 'no') => {
     setResponse(answer)
+    setIsTracking(true)
+    
+    try {
+      // Track the response
+      await fetch('/api/track-response', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ response: answer }),
+      })
+    } catch (error) {
+      console.error('Error tracking response:', error)
+    } finally {
+      setIsTracking(false)
+    }
   }
 
   return (
@@ -48,18 +65,20 @@ export function ForgivenessSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 onClick={() => handleResponse('yes')}
-                className="bg-slate-600 hover:bg-slate-700 text-white px-8 py-4 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                disabled={isTracking}
+                className="bg-slate-600 hover:bg-slate-700 disabled:opacity-50 text-white px-8 py-4 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <MessageSquare className="mr-2 h-5 w-5" />
-                sim, te perdoo
+                {isTracking ? 'Registrando...' : 'sim, te perdoo'}
               </Button>
               
               <Button
                 variant="outline"
                 onClick={() => handleResponse('no')}
-                className="border-slate-300 text-slate-600 hover:bg-slate-50 px-8 py-4 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                disabled={isTracking}
+                className="border-slate-300 text-slate-600 hover:bg-slate-50 disabled:opacity-50 px-8 py-4 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                prefiro não responder
+                {isTracking ? 'Registrando...' : 'prefiro não responder'}
               </Button>
             </div>
           </ScrollReveal>

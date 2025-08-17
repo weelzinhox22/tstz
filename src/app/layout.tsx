@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { AntiPrint } from "@/components/anti-print";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
               <ThemeToggle />
             </div>
             {children}
+            <Analytics />
           </LenisProvider>
         </ThemeProvider>
       </body>
