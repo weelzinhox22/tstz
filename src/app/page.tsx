@@ -38,6 +38,12 @@ const sections: { id: string; title: string; text: string }[] = [
       'quero te pedir desculpas por diversas coisas: por não ter agido quando deveria, pela forma como terminamos, pelos momentos em que não fui a pessoa que você merecia. sei que permiti que nosso relacionamento esfriasse várias vezes, e isso foi um erro meu. também reconheço que nem sempre soube interpretar suas necessidades ou expectativas, e que talvez tenha faltado comunicação clara entre nós. é difícil admitir, mas sei que minha imaturidade contribuiu para muitos dos problemas que enfrentamos.'
   },
   {
+    id: 'misunderstanding',
+    title: 'sobre aquele mal-entendido',
+    text:
+      'preciso esclarecer algo que sempre me incomodou: aquela situação que você presenciou, onde tirou conclusões sobre mim conversando com outra pessoa. naquele momento específico, não havia nada acontecendo além de uma conversa casual. sei que as aparências podem enganar e entendo sua reação, mas gostaria que soubesse que não era o que parecia. tentei te explicar isso na época mas você não quis saber, esse mal-entendido criou uma ferida entre nós que nunca conseguimos curar adequadamente. O que aconteceu depois em relação a mim, não teve nada a ver com aquele dia, eu te juro que naquele momento eu não estava com ninguém.'
+  },
+  {
     id: 'learn',
     title: 'aprendizado e crescimento',
     text:
@@ -66,12 +72,6 @@ const sections: { id: string; title: string; text: string }[] = [
     title: 'sempre torcerei por você',
     text:
       'independente do rumo que nossas vidas tomem, quero que saiba que sempre vou torcer pelo seu sucesso e felicidade. você é uma pessoa especial, com um potencial incrível, e mereçe todas as coisas boas que a vida pode oferecer. essa é uma verdade que vai além de qualquer história que tivemos juntos.'
-  },
-  {
-    id: 'jealous',
-    title: 'uma confissão honesta',
-    text:
-      'sei que não tenho o direito de opinar sobre sua vida amorosa, mas seria mentira dizer que a ideia de você com outra pessoa não me afeta. é um sentimento que reconheço como imaturo e possessivo, mas que existe e que preciso processar. espero conseguir, com o tempo, torcer genuinamente pela sua felicidade, mesmo que seja ao lado de outra pessoa.'
   },
     {
     id: 'love',
@@ -120,7 +120,7 @@ export default function Home() {
                 <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent w-24" />
               </div>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                cada palavra aqui foi pensada e repensada, numa tentativa honesta de organizar sentimentos e pensamentos que ficaram pendentes. <br /> não conseguiria ter paz sem compartilhar isso com você.
+                cada palavra aqui foi pensada e repensada, numa tentativa de organizar sentimentos e pensamentos que ficaram pendentes. <br /> não conseguiria ter paz sem compartilhar isso com você.
               </p>
               <p className="text-sm text-muted-foreground/60 font-mono">
                 não há expectativa de resposta ou retomada de contato. apenas senti que você merecia saber o que penso sobre tudo que vivemos. escolhi esta forma porque acredito ser mais respeitosa que uma abordagem direta.
