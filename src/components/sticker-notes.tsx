@@ -14,12 +14,12 @@ type StickerNote = {
 }
 
 const stickerNotes: StickerNote[] = [
-  { id: '1', text: 'o tempo passa e o que fica é você', color: 'yellow', rotation: -3, size: 'md' },
-  { id: '2', text: 'mozamore 💕', color: 'pink', rotation: 5, size: 'sm' },
-  { id: '3', text: 'espero que em algum mundo, a gente tenha ficado juntos', color: 'blue', rotation: -7, size: 'lg' },
-  { id: '4', text: 'AAAAAAAAAAAAA', color: 'green', rotation: 2, size: 'md' },
-  { id: '5', text: 'sdds dos filmes', color: 'yellow', rotation: -4, size: 'md' },
-  { id: '6', text: 'sdds das farofas', color: 'pink', rotation: 8, size: 'sm' }
+  { id: '1', text: 'algumas memórias permanecem', color: 'yellow', rotation: -3, size: 'md' },
+  { id: '2', text: 'memórias de tempos simples', color: 'blue', rotation: 5, size: 'sm' },
+  { id: '3', text: 'talvez em outro contexto teria sido diferente', color: 'green', rotation: -7, size: 'lg' },
+  { id: '4', text: 'hoje reconheço que errei muito', color: 'yellow', rotation: 2, size: 'md' },
+  { id: '5', text: 'apesar de tudo, sei que bons momentos existiram', color: 'blue', rotation: -4, size: 'md' },
+  { id: '6', text: 'grato pelo que foi bom, grato pelo aprendizado', color: 'green', rotation: 8, size: 'sm' }
 ]
 
 export function StickerNotes() {
@@ -55,10 +55,10 @@ export function StickerNotes() {
   }, [])
 
   const colorClasses = {
-    yellow: 'bg-yellow-200 text-yellow-900 shadow-yellow-300/30',
-    pink: 'bg-pink-200 text-pink-900 shadow-pink-300/30',
-    blue: 'bg-blue-200 text-blue-900 shadow-blue-300/30',
-    green: 'bg-green-200 text-green-900 shadow-green-300/30'
+    yellow: 'bg-yellow-100 text-yellow-800 shadow-yellow-200/30',
+    pink: 'bg-slate-100 text-slate-800 shadow-slate-200/30',
+    blue: 'bg-blue-100 text-blue-800 shadow-blue-200/30',
+    green: 'bg-green-100 text-green-800 shadow-green-200/30'
   }
 
   const sizeClasses = {

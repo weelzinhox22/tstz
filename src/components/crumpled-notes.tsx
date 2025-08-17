@@ -19,9 +19,9 @@ type CrumpledNote = {
 }
 
 const crumpledNotes: CrumpledNote[] = [
-  { id: '2', text: 'mozamore sempre vai ser meu apelido favorito', rotation: 12, scale: 1.1, color: 'pink' },
-  { id: '4', text: 'você sempre vai ser especial pra mim', rotation: 15, scale: 1.05, color: 'white' },
-  { id: '5', text: 'desculpa por não ter sido melhor', rotation: -12, scale: 0.85, color: 'yellow' },
+  { id: '2', text: 'algumas coisas não mudam com o tempo', rotation: 12, scale: 1.1, color: 'white' },
+  { id: '4', text: 'reconheço que cometi erros', rotation: 15, scale: 1.05, color: 'cream' },
+  { id: '5', text: 'poderia ter feito melhor', rotation: -12, scale: 0.85, color: 'yellow' },
 ]
 
 export function CrumpledNotes() {
@@ -110,19 +110,18 @@ export function CrumpledNotes() {
     <SectionLayout variant="default" spacing="xl">
       <div className="relative">
         {/* Background elements */}
-        <div className="absolute left-[5%] top-[10%] h-16 w-16 rounded-full bg-gradient-to-br from-yellow-200/20 to-orange-200/10 blur-lg" />
-        <div className="absolute right-[8%] bottom-[20%] h-24 w-24 rounded-full bg-gradient-to-br from-pink-200/15 to-rose-200/8 blur-xl" />
+        <div className="absolute left-[5%] top-[10%] h-16 w-16 rounded-full bg-gradient-to-br from-slate-200/15 to-gray-200/8 blur-lg" />
+        <div className="absolute right-[8%] bottom-[20%] h-20 w-20 rounded-full bg-gradient-to-br from-slate-200/10 to-gray-200/5 blur-lg" />
         
         <ScrollReveal>
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-3 mb-6">
-              <span className="text-2xl">📝</span>
-              <div className="h-px bg-gradient-to-r from-transparent via-yellow-300 to-transparent w-16" />
-              <span className="text-xl">💭</span>
-              <div className="h-px bg-gradient-to-l from-transparent via-pink-300 to-transparent w-16" />
+              <div className="h-px bg-gradient-to-r from-transparent via-slate-300/50 to-transparent w-20" />
+              <span className="text-2xl">🗈️</span>
+              <div className="h-px bg-gradient-to-l from-transparent via-slate-300/50 to-transparent w-20" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-600 via-orange-500 to-pink-600 bg-clip-text text-transparent">
-              bilhetinhos amassados
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-slate-600 via-gray-700 to-slate-600 bg-clip-text text-transparent">
+              algumas anotações
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               
@@ -171,7 +170,7 @@ export function CrumpledNotes() {
         <ScrollReveal y={8} delay={0.3}>
           <div className="text-center mt-16">
             <p className="text-sm text-muted-foreground/70 italic max-w-md mx-auto">
-              &ldquo;cada bilhetinho que eu sabia que não deveria te dar...&rdquo;
+              pensamentos que ficaram guardados
             </p>
           </div>
         </ScrollReveal>

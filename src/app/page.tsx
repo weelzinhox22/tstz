@@ -17,67 +17,67 @@ const sections: { id: string; title: string; text: string }[] = [
     id: 'intro',
     title: 'oi',
     text:
-      'oi, essa é a milésima coisa que escrevo para você e não sei como te mostrar ou se devo mostrar, mas... eu acho que as coisas ficaram mal resolvidas, pelo menos pra mim, são dias sem dormir direito, eu acho que te devo desculpa por tudo que aconteceu, e eu acho que não pedi, então eu preciso fazer isso agora pra conseguir ficar em paz, de uns meses pra cá eu não consigo esquecer tudo, então tive que escrever isso, eu espero muito que você veja tudo... você não sai da minha cabeça, eu não consigo parar de pensar em você, não importa quanto tempo passe, não importa o que tenha acontecido, você simplesmente não sai da minha cabeça.'
+      'essa não é a primeira coisa que escrevo para você, mas talvez seja a primeira que realmente faça sentido. sinto que as coisas terminaram de forma incompleta, pelo menos da minha perspectiva. tenho passado meses refletindo sobre tudo que aconteceu entre nós, e cheguei à conclusão de que preciso te pedir desculpas. não conseguiria ter paz comigo mesmo sem fazer isso. sei que pode parecer tarde, mas você ainda ocupa um espaço importante nos meus pensamentos, independente de todo o tempo que passou.'
   },
   {
     id: 'forever',
-    title: 'talvez pra sempre seu',
+    title: 'uma conexão que permanece',
     text:
-      'Parece que eu vou ser para sempre seu, parece que é algo de outra vida, é impossivel, tem tantos anos já e eu sempre me pego pensando em você, isso é absurdo, eu queria muito poder recomeçar do zero, esquecendo tudo que passou, recomeçar com uma nova mentalidade, só eu e você, mas sei que isso não é possível.'
+      'reconheço que ainda sinto uma conexão profunda com você, algo que parece transcender o tempo. mesmo depois de tanto tempo, me pego pensando em como as coisas poderiam ter sido diferentes se eu tivesse tido mais maturidade na época. sei que não é realista imaginar um recomeço, mas não posso negar que essa possibilidade já passou pela minha cabeça.'
   },
   {
     id: 'distance',
-    title: 'sinais e mais sinais',
+    title: 'entendo o silêncio',
     text:
-      'Sei que você não está nem aí, comigo não deve mais se importar, afinal, já dei alguns sinais que queria ao menos falar com você, e nenhum deles foram retribuídos, e tudo bem... não te julgo, sei o que eu fui na sua vida, tanto pro lado bom, quanto pro ruim.'
+      'entendo que você pode não querer mais contato comigo. reconheço que tentei algumas aproximações que não foram correspondidas, e respeito completamente sua escolha. sei que minha presença em sua vida teve momentos bons e ruins, e compreendo se a balança não pende a meu favor.'
   },
   {
     id: 'apology',
-    title: 'desculpa',
+    title: 'reconhecendo meus erros',
     text:
-      'Eu na verdade só queria te pedir desculpa por tudo, desculpa por não ter feito nada quando deveria ter feito, desculpa pela forma como terminamos, desculpa pela forma como eu fui, desculpa pelo que você achou quando terminamos, desculpa por ter deixado nosso relacionamento esfriar tantas vezes, mas também porra, era pra você me ajudar 🙄👍🏾, nem sempre eu vou estar 100%, eu precisava que você completasse a % nesses dias, nem sempre eu queria sair, mas eu iria se você quisesse. E você queria, mas não me falava, eu não tinha como adivinhar essas coisas (falando sobre a ultima vez, eu tenho a lembrança de que em algum momento eu tentei de esclarecer coisas e lembro que no dia você não estava muito adepta a isso).'
+      'quero te pedir desculpas por diversas coisas: por não ter agido quando deveria, pela forma como terminamos, pelos momentos em que não fui a pessoa que você merecia. sei que permiti que nosso relacionamento esfriasse várias vezes, e isso foi um erro meu. também reconheço que nem sempre soube interpretar suas necessidades ou expectativas, e que talvez tenha faltado comunicação clara entre nós. é difícil admitir, mas sei que minha imaturidade contribuiu para muitos dos problemas que enfrentamos.'
   },
   {
     id: 'learn',
-    title: 'aprender pro futuro',
+    title: 'aprendizado e crescimento',
     text:
-      'Enfim, não adianta ficar voltando no passado tentando consertar o que já passou, o importante é aprender para o futuro, e eu tenho tentado. Tentei seguir em frente, mas não deu, não dá para esquecer você.'
+      'sei que não posso mudar o que já aconteceu, mas posso aprender com os erros e crescer como pessoa. tenho me esforçado para isso todos os dias. tentei seguir em frente completamente, mas seria desonesto dizer que consegui te esquecer. você marcou minha vida de forma significativa, e isso é algo que carrego comigo.'
   },
   {
     id: 'nicknames',
-    title: 'mozamore',
+    title: 'pequenos detalhes',
     text:
-      'não dá pra esquecer os apelidos, eu simplesmente amava quando você me chamava de "mozamore" ou quando entonava e falava "mozoare", você não tem noção do quanto eu gostava disso.'
+      'existem pequenos detalhes que se tornaram especiais demais para simplesmente esquecer. o jeito carinhoso como você criava apelidos, a entonação particular quando falava "mozoare"... eram gestos simples que ganharam um significado enorme para mim, e que guardo com carinho na memória.'
   },
   {
     id: 'support',
-    title: 'eu gostava de te ajudar',
+    title: 'admirava sua dedicação',
     text:
-      'Você não tem noção do quanto eu gostava de ajudar você, te incentivar nos seus estudos, ajudar você em qualquer coisa sempre foi tão bom pra mim, ver sua dedicação, seu comprometimento com o que você se propôs a fazer, eu gostava até mesmo ajudar a limpar a casa, "ajudar" a cozinhar, pq vc não deixava eu fazer nada e qd eu fazia ainda reclamava vei, coisas simples do dia a dia mesmo, só ficava imaginando a gente na nossa casa dividindo as tarefas.'
+      'sempre admirei sua dedicação e comprometimento com tudo que se propunha a fazer. ajudar você, seja nos estudos ou nas tarefas do dia a dia, me dava uma sensação de propósito e proximidade que eu valorizo muito. mesmo nas pequenas discussões sobre quem fazia o quê em casa, eu via ali a construção de algo conjunto, uma vida compartilhada. eram momentos simples que ganharam um valor especial.'
   },
   {
     id: 'chance',
-    title: 'não peço outra chance',
+    title: 'sem expectativas',
     text:
-      'Por fim, não tô pedindo outra chance porque sei que não mereço (mas devo admitir que eu queria, espero que se existir outra vida, outro universo, sei la, eu espero que pelo menos lá eu e você tenhamos ficado juntos).'
+      'não estou aqui pedindo uma segunda chance, porque entendo que algumas coisas realmente chegam ao fim. seria desonesto não admitir que existe uma parte de mim que imagina como seria se pudéssemos tentar novamente, com mais maturidade, mas respeito o que você decidir. esta carta é sobre encerramento e reconhecimento, não sobre expectativas.'
   },
   {
     id: 'cheer',
-    title: 'eu torço por você',
+    title: 'sempre torcerei por você',
     text:
-      'Saiba que independente de se nossos caminhos se cruzarem novamente ou não, eu sempre vou torcer por você, sempre vou desejar o seu bem e quero sempre ouvir coisas boas a seu respeito.'
+      'independente do rumo que nossas vidas tomem, quero que saiba que sempre vou torcer pelo seu sucesso e felicidade. você é uma pessoa especial, com um potencial incrível, e mereçe todas as coisas boas que a vida pode oferecer. essa é uma verdade que vai além de qualquer história que tivemos juntos.'
   },
   {
     id: 'jealous',
-    title: 'se for namorar outra pessoa...',
+    title: 'uma confissão honesta',
     text:
-      'a eu ia falar um ngc aqui mas resolvi apagar, então vou deixar só o final... Na verdade oxe, não namore com ninguém não 👍🏾'
+      'sei que não tenho o direito de opinar sobre sua vida amorosa, mas seria mentira dizer que a ideia de você com outra pessoa não me afeta. é um sentimento que reconheço como imaturo e possessivo, mas que existe e que preciso processar. espero conseguir, com o tempo, torcer genuinamente pela sua felicidade, mesmo que seja ao lado de outra pessoa.'
   },
     {
     id: 'love',
-    title: 'você vai ser pra sempre minha pessoa',
+    title: 'o que preciso dizer',
     text:
-      'Bom, acho que aqui eu devia colocar que te amo né, vendo tudo que tá acontecendo na minha cabeça e no meu peito, não tenho como negar, eu acho que vou estar para sempre preso em você, você sempre volta pra minha mente, não importa quanto tempo passe. me desculpa por tudo, desejo tudo de melhor na sua vida sempre! se cuida, meu bem. 💖'
+      'seria desonesto terminar esta carta sem reconhecer que ainda tenho sentimentos profundos por você. não sei se isso vai mudar com o tempo, e não espero que isso mude alguma coisa entre nós. é apenas uma verdade que carrego e que faz parte de quem eu sou hoje. o amor que sinto por você me ensinou muito sobre mim mesmo, tanto as qualidades quanto os defeitos. obrigado por ter sido parte da minha jornada. cuide-se sempre.'
   },
   {
     id: 'quote',
@@ -89,12 +89,12 @@ const sections: { id: string; title: string; text: string }[] = [
 
 export default function Home() {
   const memories: MemoryItem[] = [
-    { id: 'm1', title: 'mozamore', text: 'eu amava quando você me chamava assim 💘' },
-    { id: 'm2', title: 'mozoare', text: 'quando você falava com aquela entonação' },
-    { id: 'm3', title: 'que mulher, viu', text: 'ver sua dedicação me fazia gostar ainda mais de você' },
-    { id: 'm4', title: 'casa', text: 'amava ajudar você a fazer as coisas' },
-    { id: 'm5', title: 'planos', text: 'sonhavam com nossa vida juntos, nossa casinha, nossos gatos, nossa filhinha, cecilia...' },
-    { id: 'm6', title: 'filmes', text: 'amava nossas noites assistindo filmes' },
+    { id: 'm1', title: 'gestos de carinho', text: 'a forma especial como você criava apelidos que eram só nossos' },
+    { id: 'm2', title: 'detalhes únicos', text: 'aquela entonação particular que você usava para certas palavras' },
+    { id: 'm3', title: 'admiração genuína', text: 'observar sua dedicação sempre me inspirava e me fazia te admirar mais' },
+    { id: 'm4', title: 'momentos cotidianos', text: 'compartilhar as tarefas simples do dia a dia, construindo algo juntos' },
+    { id: 'm5', title: 'sonhos compartilhados', text: 'quando planejávamos um futuro em comum, cheio de detalhes e expectativas' },
+    { id: 'm6', title: 'conexão simples', text: 'noites tranquilas vendo filmes, aproveitando a companhia um do outro' },
   ]
   
   return (
@@ -111,19 +111,19 @@ export default function Home() {
         <SectionLayout variant="narrow" spacing="xl">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground via-pink-600 to-purple-600 bg-clip-text text-transparent">
-                minha carta para você
+              <h2 className="text-3xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-700 via-gray-600 to-slate-700 bg-clip-text text-transparent">
+                uma carta necessária
               </h2>
               <div className="flex items-center justify-center mb-6">
-                <div className="h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent w-24" />
-                <div className="mx-4 h-2 w-2 rounded-full bg-pink-400" />
-                <div className="h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent w-24" />
+                <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent w-24" />
+                <div className="mx-4 h-2 w-2 rounded-full bg-slate-400" />
+                <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent w-24" />
               </div>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Cada palavra aqui é mais ou menos como eu estou me sentindo agora. <br /> Cada coisinha foi feita a mão, tudo tentando transmitir o que eu quero te dizer.
+                cada palavra aqui foi pensada e repensada, numa tentativa honesta de organizar sentimentos e pensamentos que ficaram pendentes. <br /> não conseguiria ter paz sem compartilhar isso com você.
               </p>
               <p className="text-sm text-muted-foreground/60 font-mono">
-                lembrando que você não precisa me responder ou voltar a falar comigo caso não queira, não sabia como te dizer o que eu queria, achei que isso seria melhor que tentar te falar diretamente.
+                não há expectativa de resposta ou retomada de contato. apenas senti que você merecia saber o que penso sobre tudo que vivemos. escolhi esta forma porque acredito ser mais respeitosa que uma abordagem direta.
               </p>
             </div>
           </ScrollReveal>
@@ -149,20 +149,20 @@ export default function Home() {
           <div className="max-w-3xl mx-auto space-y-8">
             <ScrollReveal y={20} delay={0.3}>
               <div className="flex items-center justify-center mb-8">
-                <div className="h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent w-16" />
-                <div className="mx-4 h-1 w-1 rounded-full bg-pink-400" />
-                <div className="h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent w-16" />
+                <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent w-16" />
+                <div className="mx-4 h-1 w-1 rounded-full bg-slate-400" />
+                <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent w-16" />
               </div>
             </ScrollReveal>
             
             <ScrollReveal y={12} delay={0.5}>
-              <p className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground via-pink-600 to-purple-600 bg-clip-text text-transparent leading-tight">
-                eu torço por você, sempre.
+              <p className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-slate-700 via-gray-600 to-slate-700 bg-clip-text text-transparent leading-tight">
+                desejo sempre o seu melhor.
               </p>
             </ScrollReveal>
             <ScrollReveal y={12} delay={0.7}>
               <p className="text-base sm:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-                independente de tudo, você sempre terá meu apoio, não que você precise dele, mas é só pra te lembrar que eu sempre vou estar aqui.
+                independente dos caminhos que nossas vidas tomem, carrego comigo a sincera torcida pelo seu sucesso e felicidade. você mereçe todas as coisas boas que a vida pode oferecer.
               </p>
             </ScrollReveal>
           </div>
