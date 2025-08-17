@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 
@@ -107,7 +108,7 @@ export default function StatsPage() {
 
         <div className="mt-8 text-center">
           <Button asChild variant="outline">
-            <a href="/">Voltar para a carta</a>
+            <Link href="/">Voltar para a carta</Link>
           </Button>
         </div>
       </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, lazy } from 'react';
+import { Suspense } from 'react';
 import { useMobile } from '@/hooks/use-mobile';
 
 interface LazyWrapperProps {
