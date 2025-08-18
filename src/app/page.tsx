@@ -59,7 +59,7 @@ const sections: { id: string; title: string; text: string }[] = [
     id: 'support',
     title: 'admirava sua dedicação',
     text:
-      'sempre admirei sua dedicação e comprometimento com tudo que se propunha a fazer. ajudar você, seja nos estudos ou nas tarefas do dia a dia, me dava uma sensação de propósito e proximidade que eu valorizo muito. mesmo nas pequenas discussões sobre quem fazia o quê em casa, eu via ali a construção de algo conjunto, uma vida compartilhada. eram momentos simples que ganharam um valor especial.'
+      'sempre admirei sua dedicação e comprometimento com tudo que se propunha a fazer. ajudar você, seja nos estudos ou nas tarefas do dia a dia, me dava uma sensação de propósito e proximidade que eu valorizo muito. mesmo nos pequenos detalhes quando eu tentava te ajudar a cozinhar alguma coisa, eu via ali a construção de algo conjunto, uma vida compartilhada. eram momentos simples que ganharam um valor especial.'
   },
   {
     id: 'chance',
