@@ -71,7 +71,7 @@ const sections: { id: string; title: string; text: string }[] = [
     id: 'cheer',
     title: 'sempre torcerei por você',
     text:
-      'independente do rumo que nossas vidas tomem, quero que saiba que sempre vou torcer pelo seu sucesso e felicidade. você é uma pessoa especial, com um potencial incrível, e mereçe todas as coisas boas que a vida pode oferecer. essa é uma verdade que vai além de qualquer história que tivemos juntos.'
+      'independente do rumo que nossas vidas tomem, quero que saiba que sempre vou torcer pelo seu sucesso e felicidade. você é uma pessoa especial, com um potencial incrível, e merece todas as coisas boas que a vida pode oferecer. essa é uma verdade que vai além de qualquer história que tivemos juntos.'
   },
     {
     id: 'love',
@@ -162,7 +162,7 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal y={12} delay={0.7}>
               <p className="text-base sm:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-                independente dos caminhos que nossas vidas tomem, carrego comigo a sincera torcida pelo seu sucesso e felicidade. você mereçe todas as coisas boas que a vida pode oferecer.
+                independente dos caminhos que nossas vidas tomem, carrego comigo a sincera torcida pelo seu sucesso e felicidade. você merece todas as coisas boas que a vida pode oferecer.
               </p>
             </ScrollReveal>
           </div>
